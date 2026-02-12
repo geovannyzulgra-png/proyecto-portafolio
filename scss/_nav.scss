@@ -1,0 +1,66 @@
+@use 'variables';
+@use 'mixins';
+
+.wrap {
+    width: 1300px;
+    height: 62px;
+    margin: 0 auto;
+    background-color: variables.$primary-color;
+    border-radius: 10px;
+    margin-top: 1rem;
+
+    .logo {
+        img {
+            float: left;
+            width: 100px;
+            margin-left: 1rem;
+        }
+    }
+
+    .menu {
+        float: right;
+        height: 70px;
+
+        ul {
+            li {
+                font-size: 24px;
+                display: inline-block;
+                margin: 0px 20px 0px 20px;
+                line-height: 60px;
+
+                a {
+                    display: block;
+                    color: black;
+                    text-decoration: none;
+                    transition: all 200ms;
+                }
+
+                a:hover {
+                    color: black;
+                    transform: scale(1.2, 1.2);
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    width: 100vw;
+    height: 100vh;
+    @include mixins.centrar-flex;
+    background: linear-gradient(to right, rgb(0 0 0 /.5), rgb(0 0 0 / .5)), url(/images/imagen_800x600.png);
+    background-size: cover;
+    background-position: center;
+
+    .banner-text {
+        color: white;
+        text-align: center;
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        font-weight: 500;
+        line-height: 4.85rem;
+    }
+}

@@ -1,3 +1,14 @@
+@use"nav";
+@use"about";
+@use "variables";
+@use "mixins";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
-    background-color: red;
+    background-color: black;
 }

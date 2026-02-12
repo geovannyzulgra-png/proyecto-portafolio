@@ -1,0 +1,11 @@
+@mixin centrar-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin style-layout{
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #1b2532;
+}
