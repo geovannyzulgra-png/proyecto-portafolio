@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.section-contact .card-info {
+  display: grid;
+  /* Define el contenedor como una cuadrícula */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columnas de igual tamaño */
+  gap: 20px;
+  /* Espacio de 20px entre filas y columnas */
+  text-align: center;
+}
+.section-contact .card-info .line-break {
+  color: white;
+}
+
+.section-map .form-map {
+  margin: 30px;
+  display: grid;
+  /* Define el contenedor como una cuadrícula */
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columnas de igual tamaño */
+  gap: 20px;
+}
+.section-map .form-map iframe {
+  height: 400px;
+  width: 100%;
+}
+.section-map .form-map .box-form input {
+  width: 100%;
+  padding: 10px;
+  border: 2px red solid;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+}
+.section-map .form-map .box-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px red solid;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  height: 200px;
+}
+.section-map .form-map .box-form .input-form {
+  margin-bottom: 20px;
+}
+.section-map .form-map .box-form button {
+  width: 100%;
+}
+.section-map .form-map .box-form input:focus {
+  background-color: green;
+  color: pink;
+  outline: none;
+  border-color: yellow;
+}/*# sourceMappingURL=contact.css.map */

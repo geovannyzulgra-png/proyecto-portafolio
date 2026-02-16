@@ -1,8 +1,9 @@
 @use 'variables';
 @use 'mixins';
+@use 'fonts';
 
 .wrap {
-    width: 1300px;
+    width: 1200px;
     height: 62px;
     margin: 0 auto;
     background-color: variables.$primary-color;
@@ -22,8 +23,10 @@
         height: 70px;
 
         ul {
+            font-family: 'Overused', sans-serif;
+
             li {
-                font-size: 24px;
+                font-size: 1.2rem;
                 display: inline-block;
                 margin: 0px 20px 0px 20px;
                 line-height: 60px;
@@ -45,10 +48,11 @@
 }
 
 .banner {
-    width: 100vw;
-    height: 100vh;
+    width: 1200px;
+    margin: 80px auto;
+    height: 600px;
     @include mixins.centrar-flex;
-    background: linear-gradient(to right, rgb(0 0 0 /.5), rgb(0 0 0 / .5)), url(/images/imagen_800x600.png);
+    background: linear-gradient(to right, rgb(0 0 0 /.3), rgb(0 0 0 / 1)), url(/images/imagen_800x600.png);
     background-size: cover;
     background-position: center;
 
@@ -56,11 +60,115 @@
         color: white;
         text-align: center;
         width: 50%;
+
+        img {
+            width: 115px;
+            transform: translateY(-113%) translateX(195%);
+            margin-left: 1rem;
+            position: absolute;
+        }
+
+        .social-btn {
+            letter-spacing: 1px;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            cursor: pointer;
+            text-transform: uppercase;
+            background-color: #1e1e1e;
+            border-radius: .5rem;
+            padding: 10px 20px;
+            font-family: Roboto Mono, sans-serif;
+            transition: transform .3s cubic-bezier(.25, .46, .45, .94);
+        }
+
+        .social-btn:hover {
+            color: #000;
+            background-color: variables.$primary-color;
+            transform: rotate(-3deg);
+            border: none;
+        }
+
     }
 
     h1 {
         font-size: 4.5rem;
+        text-transform: uppercase;
         font-weight: 500;
-        line-height: 4.85rem;
+        line-height: 6.5rem;
+        margin-bottom: 1rem;
+        font-family: 'Overused', sans-serif;
+        ;
+    }
+}
+
+.section {
+    overflow: hidden;
+
+    .container-index {
+        width: 100%;
+        max-width: 1300px;
+        height: 100%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        .list-section {
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 6rem;
+            display: flex;
+
+            .text-medium {
+                color: #fff;
+                font-size: 1.25rem;
+                font-weight: 500;
+                line-height: 1.5rem;
+            }
+
+            .flex-list {
+                grid-column-gap: 1rem;
+                grid-row-gap: 1rem;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                display: flex;
+
+                .skill-item {
+                    grid-column-gap: 1rem;
+                    grid-row-gap: 1rem;
+                    background-color: #171717;
+                    border-radius: .5rem;
+                    flex-flow: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20%;
+                    padding: 2rem;
+                    display: flex;
+                }
+
+                .skill-logo {
+                    object-fit: contain;
+                    height: 60px;
+                    filter: grayscale(100%);
+                    transition: filter 0.3s ease;
+
+                    .skill-logo :hover {
+                        filter: grayscale(0%);
+                    }
+                }
+
+                .text-small {
+                    color: #a1a1a1;
+                    letter-spacing: .2px;
+                    font-weight: 400;
+                    line-height: 1.5rem;
+                }
+            }
+        }
     }
 }
